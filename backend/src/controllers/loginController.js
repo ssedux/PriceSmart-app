@@ -89,7 +89,7 @@ loginController.login = async (req, res) => {
     }
 
     // Generar token
-    jsonwebtoken.sign(
+    const token = jsonwebtoken.sign(
       //1- Que voy a guardar
       { id: userFound._id, userType },
       //2- Clave secreta
